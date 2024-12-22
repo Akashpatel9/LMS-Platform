@@ -6,7 +6,7 @@ const userSchema = new Schema({
         trim: true,
         required: true,
     },
-    lastName: {
+    lastName: { 
         type: String,
         trim: true
     },
@@ -31,14 +31,14 @@ const userSchema = new Schema({
         ref:"Profile",
         required:true,
     },
-    courses:{
+    courses:[{
         type: mongoose.Schema.Types.ObjectId,
         ref:"Courses",
-    },
-    courseProgress:{
+    }],
+    courseProgress:[{
         type: mongoose.Schema.Types.ObjectId,
         ref:"CourseProgress"
-    }
+    }]
 })
 
 
